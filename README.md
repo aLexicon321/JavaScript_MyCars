@@ -1,2 +1,3 @@
-# JavaScript_MyCars
-HTML, CSS, JS - My Cars
+# JavaScript MyCars
+
+Frontend with Html, Css, JavaScript
