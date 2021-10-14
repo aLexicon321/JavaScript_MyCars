@@ -7,7 +7,19 @@
     <body>
         <h1>My Cars</h1>
         <button onclick="loadMyCars()">Load Cars</button>
-        <ul id="carList"></ul>
+        <ul id="carList"></ul><hr>
+        <table>
+            <thead>
+                <td>Brand</td>
+                <td>Model</td>
+            </thead>
+            <tbody id="newCarField">
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+                <td><input type="button" onclick="createCar()" value="Create" /></td>
+            </tbody>
+        </table>
     </body>
+    <script src="./cars.js"></script>
     <script src="./script.js"></script>
 </html>

@@ -1,11 +1,14 @@
 body{
     background-color: blueviolet;
+    font-family: consolas;
+    color: white;
 }
 h1{
-
-    color:white;
+    font-weight: 800;
 }
 li{
-    color: white;
-    font-family: consolas;
+    font-size: 1.5em;
+}
+input{
+    font-size: 1.3em;
 }
