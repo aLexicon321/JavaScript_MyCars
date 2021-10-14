@@ -1,14 +1,54 @@
+*{
+    margin: 10;
+    padding: 0;
+    font-family: consolas;
+}
+
 body{
-    background-color: blueviolet;
+    background-color: rgb(35, 11, 56);
     font-family: consolas;
     color: white;
 }
-h1{
-    font-weight: 800;
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
-li{
-    font-size: 1.5em;
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    min-width: 150px;
+    max-width: 150px;
 }
+
+tr:nth-child(even){ background-color: rgb(56, 23, 95); }
+
+tr:hover { 
+    color: black;
+    cursor:pointer;  
+    background-color: darkgray;
+}
+
+th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #351e6b;
+    color: white;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+}
+
+input{
+    height: 24px;
+    font-size: 16px;
+}
+
 input{
     font-size: 1.3em;
 }
