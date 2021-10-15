@@ -6,7 +6,6 @@
 
 body{
     background-color: rgb(35, 11, 56);
-    font-family: consolas;
     color: white;
 }
 
@@ -25,11 +24,7 @@ td, th {
 
 tr:nth-child(even){ background-color: rgb(56, 23, 95); }
 
-tr:hover { 
-    color: black;
-    cursor:pointer;  
-    background-color: darkgray;
-}
+tr:hover, button:hover  { background-color: black; color: white; }
 
 th{
     padding-top: 12px;
@@ -42,13 +37,30 @@ th{
 button{
     width: 100px;
     height: 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 15px;
 }
 
 input{
     height: 24px;
-    font-size: 16px;
+    outline: none;
+    font-size: 1.3em;
+    border-radius: 15px;
 }
 
-input{
-    font-size: 1.3em;
+input[type="text"]{
+    padding-left: .3em;
+}
+
+input[type="button"]{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+input[type="button"]:hover { 
+    cursor: pointer;  
+    color : white;
+    background-color: black;
 }

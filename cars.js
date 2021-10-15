@@ -9,4 +9,7 @@ const new_Honda = {
     engine: { cylinders: 4, size: 2.2 },
     brand: "Honda", model: "Miata", year : "2004"
 };
+
 cars.push(new_Honda);
+
+(window ? window.cars = cars : cars);

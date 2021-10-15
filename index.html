@@ -3,28 +3,29 @@
     <head>
         <title>My Cars</title>
         <link rel="stylesheet" href="./style.css">
+        <script import="jQuery">const $ = document;</script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body onload="readCars()">
-        <h1>Add Car</h1>
+        <h1 class="heading">Add Car</h1>
         <table>
             <tr>
                 <th>Brand</th>
                 <th>Model</th>
                 <th>Year</th>
-                <th>Actions</th>
+                <th>Manage</th>
             </tr>
-            <tr id="newCarField">
+            <tr id="carField">
                 <th> <input type="text" id="brand" /> </th>
                 <th> <input type="text" id="model" /> </th>
                 <th> <input type="text" id="year"  /> </th>
                 <th>
-                    <button id="createBtn" onclick="createCar()"> CREATE</button>
+                    <button id="createBtn" onclick="createCar()">CREATE</button>
                     <button id="updateBtn" hidden onclick="updateCar()">UPDATE</button>
                 </th>
             </tr>
         </table>
         <table id="carTable"></table>
-        <!--ul id="carList"></ul-->
     </body>
     <script src="./cars.js"></script>
     <script src="./script.js"></script>
