@@ -11,5 +11,3 @@ const new_Honda = {
 };
 
 cars.push(new_Honda);
-
-(window ? window.cars = cars : cars);

@@ -17,7 +17,6 @@ function createCar(){
     if(newCar.brand !== "" && newCar.model !== "" && newCar.year !== ""){
         cars.push(newCar);
         clearFieldsAndRefresh();
-        console.log("[CREATE]", newCar);
     }else{
         console.warn("[CREATE FAILED]: Check input", newCar);
         alert("Missing Data: Check input fields...");
@@ -27,7 +26,7 @@ function createCar(){
 // READ
 function readCars(){
     let tr = "";
-    window.cars ? window.cars.forEach((car, index) => 
+    cars.length >= 1 ? cars.forEach((car, index) => 
         tr += 
         `<tr id="carNr${ index }">
             <td>${ car.brand }</td>
@@ -50,10 +49,10 @@ function updateCar(){
             model : _model.value,
             year  : _year.value
         };
-        console.log("[UPDATE]", cars[currentId]);
         
         $.querySelector('#createBtn').hidden = false;
         $.querySelector('#updateBtn').hidden = true;
+
         clearFieldsAndRefresh();
     }else{
         console.warn("[UPDATE FAILED] : Check input.");
@@ -63,21 +62,20 @@ function updateCar(){
 
 // DELETE
 function deleteCar(id){
-    const removedCar = cars.splice(id,1);
+    cars.splice(id, 1);
     clearFieldsAndRefresh();
-    console.log("[DELETE]", removedCar[0]);
 }
 
-// Edit Mode
+// # Edit Mode
 function editCar(id){
     currentId = id;
     const car = cars[id];
+    
     if(currentId !== "" && car !== undefined){
         _brand.value = car.brand;
         _model.value = car.model;
         _year.value = car.year;
         
-        console.log("[EDIT]", car);
         $.querySelector('.heading').innerHTML = `Edit Car: <u>${car.brand}</u>`;
         $.querySelector('#createBtn').hidden = true;
         $.querySelector('#updateBtn').hidden = false;
@@ -87,14 +85,16 @@ function editCar(id){
     }
 }
 
-// Clear & Reload
+// # Clear Inputs, Reload List and Reset Elements
 function clearFieldsAndRefresh(){
     $.querySelector('.heading').innerText = "Add Car";
     $.querySelector('#createBtn').hidden = false;
     $.querySelector('#updateBtn').hidden = true;
+
     _brand.value = "";
     _model.value = "";
     _year.value = "";
+
     currentId = null;
     readCars();
 }
